@@ -1,4 +1,10 @@
+
+body{
+    font-family: 'DejaVu Sans', Times, serif;
+}
 #map{
+    font-family: "DejaVu Sans", sans-serif;
+    font-size: 15px;
     position: fixed;
     top: 0;
     left: 0;

@@ -11,6 +11,7 @@
     view: mapView,
   });
 
+  //Displaying the OpenLayer Map (Visualization)
   var osmTile = new ol.layer.Tile ({
     title: 'Open Street Map',
     visible: true,
@@ -19,7 +20,9 @@
 
   map.addLayer(osmTile);
 
-  //   Adding layer from Geoserver
+
+
+  // Importing Maps fromn the geoserver and overlaying them on the OpenLayer
 
   var subCounty = new ol.layer.Tile({
     title: "Sub Counties",
@@ -132,7 +135,7 @@
   var countyHealthFacilities = new ol.layer.Tile({
     title: "County Health Facilities",
     source: new ol.source.TileWMS({
-        url: "",
+        url: "http://192.168.20.15:8080/geoserver/nrs/wms?service=WMS&version=1.1.0&request=GetMap&layers=nrs%3Aus_health_facilities&bbox=36.68534851074219%2C-1.367385149002075%2C37.0340690612793%2C-1.173407077789307&width=768&height=427&srs=EPSG%3A4326&styles=&format=application/openlayers",
         params: {'LAYERS':'	nrs:us_health_facilities', 'TILED':true },
         serverType: 'geoserver',
         visibility: true
@@ -144,8 +147,8 @@
  var countyMortuary = new ol.layer.Tile({
     title: "County Mortuary",
     source: new ol.source.TileWMS({
-        url: " ",
-        params: {'LAYERS':'	nrs:us_mortuary', 'TILED':true },
+        url: "http://192.168.20.15:8080/geoserver/nrs/wms?service=WMS&version=1.1.0&request=GetMap&layers=nrs%3Aus_mortuary&bbox=36.802279876743285%2C-1.299262625186126%2C36.80247987674329%2C-1.299062625186126&width=768&height=767&srs=EPSG%3A4326&styles=&format=application/openlayers",
+        params: {'LAYERS':'nrs:us_mortuary', 'TILED':true },
         serverType: 'geoserver',
         visibility: true
     })
@@ -156,8 +159,8 @@
   var countyOpenGrounds = new ol.layer.Tile({
     title: "County Open Grounds",
     source: new ol.source.TileWMS({
-        url: " ",
-        params: {'LAYERS':'	nrs:us_open_grounds', 'TILED':true },
+        url: "http://192.168.20.15:8080/geoserver/nrs/wms?service=WMS&version=1.1.0&request=GetMap&layers=nrs%3Aus_open_grounds&bbox=36.7785505788682%2C-1.306519337830801%2C36.77926661305611%2C-1.305388994553039&width=486&height=768&srs=EPSG%3A4326&styles=&format=application/openlayers",
+        params: {'LAYERS':'nrs:us_open_grounds', 'TILED':true },
         serverType: 'geoserver',
         visibility: true
     })
@@ -168,7 +171,7 @@
   var countyOSM = new ol.layer.Tile({
     title: "County OSM Houses",
     source: new ol.source.TileWMS({
-        url: " ",
+        url: "http://192.168.20.15:8080/geoserver/nrs/wms?service=WMS&version=1.1.0&request=GetMap&layers=nrs%3Aus_osm_houses&bbox=36.82814025878906%2C-1.313309192657471%2C36.91692352294922%2C-1.253298878669739&width=768&height=519&srs=EPSG%3A4326&styles=&format=application/openlayers",
         params: {'LAYERS':'	nrs:us_osm_houses', 'TILED':true },
         serverType: 'geoserver',
         visibility: true
@@ -180,8 +183,8 @@
   var countyParkingZones = new ol.layer.Tile({
     title: "County Parking Zones",
     source: new ol.source.TileWMS({
-        url: " ",
-        params: {'LAYERS':'	nrs:us_parking', 'TILED':true },
+        url: "http://192.168.20.15:8080/geoserver/nrs/wms?service=WMS&version=1.1.0&request=GetMap&layers=nrs%3Aus_parking&bbox=36.762054443359375%2C-1.344016194343567%2C36.92216110229492%2C-1.234812617301941&width=768&height=523&srs=EPSG%3A4326&styles=&format=application/openlayers",
+        params: {'LAYERS':'nrs:us_parking', 'TILED':true },
         serverType: 'geoserver',
         visibility: true
     })
@@ -192,8 +195,8 @@
   var parkingZone = new ol.layer.Tile({
     title: "Parking Zones",
     source: new ol.source.TileWMS({
-        url: " ",
-        params: {'LAYERS':'	nrs:us_parking_zones', 'TILED':true },
+        url: "http://192.168.20.15:8080/geoserver/nrs/wms?service=WMS&version=1.1.0&request=GetMap&layers=nrs%3Aus_parking_zones&bbox=36.66452143284103%2C-1.444557287699954%2C37.10498452059844%2C-1.160355005177166&width=768&height=495&srs=EPSG%3A4326&styles=&format=application/openlayers",
+        params: {'LAYERS':'nrs:us_parking_zones', 'TILED':true },
         serverType: 'geoserver',
         visibility: true
     })
@@ -204,8 +207,8 @@
   var countyEducationFacilities = new ol.layer.Tile({
     title: "County Education Facilities",
     source: new ol.source.TileWMS({
-        url: " ",
-        params: {'LAYERS':'	nrs:us_public_ecde', 'TILED':true },
+        url: "http://192.168.20.15:8080/geoserver/nrs/wms?service=WMS&version=1.1.0&request=GetMap&layers=nrs%3Aus_public_ecde&bbox=36.82608430000005%2C-1.325972104999948%2C36.96209066700004%2C-1.199508807999962&width=768&height=714&srs=EPSG%3A4326&styles=&format=application/openlayers",
+        params: {'LAYERS':'nrs:us_public_ecde', 'TILED':true },
         serverType: 'geoserver',
         visibility: true
     })

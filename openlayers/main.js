@@ -1,6 +1,6 @@
   var mapView = new ol.View({
     center: ol.proj.fromLonLat([36.82598,-1.28462]),
-    zoom: 13,
+    zoom: 12,
     maxZoom: 15,
     minZoom: 4,
 
@@ -48,7 +48,7 @@
   var countyMarketPoints = new ol.layer.Tile({
     title: "County Market Points",
     source: new ol.source.TileWMS({
-        url: " ",
+        url: "http://192.168.20.15:8080/geoserver/nrs/wms?service=WMS&version=1.1.0&request=GetMap&layers=nrs%3Apf_market_points&bbox=36.70948791503906%2C-1.325808763504028%2C36.92393493652344%2C-1.202558040618896&width=768&height=441&srs=EPSG%3A4326&styles=&format=application/openlayers",
         params: {'LAYERS':'	nrs:pf_market_points', 'TILED':true },
         serverType: 'geoserver',
         visibility: true
@@ -61,7 +61,7 @@
   var countyMarket = new ol.layer.Tile({
     title: "County Market",
     source: new ol.source.TileWMS({
-        url: " ",
+        url: "http://192.168.20.15:8080/geoserver/nrs/wms?service=WMS&version=1.1.0&request=GetMap&layers=nrs%3Apf_markets&bbox=36.70921325683594%2C-1.326090216636658%2C36.92418670654297%2C-1.202184200286865&width=768&height=442&srs=EPSG%3A4326&styles=&format=application/openlayers",
         params: {'LAYERS':'	nrs:pf_markets', 'TILED':true },
         serverType: 'geoserver',
         visibility: true
@@ -84,7 +84,7 @@
   var countyHalls = new ol.layer.Tile({
     title: "County Halls",
     source: new ol.source.TileWMS({
-        url: " ",
+        url: " http://192.168.20.15:8080/geoserver/nrs/wms?service=WMS&version=1.1.0&request=GetMap&layers=nrs%3Aus_county_halls&bbox=36.817371919679886%2C-1.293742579312427%2C36.82845188622876%2C-1.263025884619823&width=330&height=768&srs=EPSG%3A4326&styles=&format=application/openlayers",
         params: {'LAYERS':'	nrs:us_county_halls', 'TILED':true },
         serverType: 'geoserver',
         visibility: true
@@ -97,7 +97,7 @@
     title: "County Houses",
     source: new ol.source.TileWMS({
         url: " ",
-        params: {'LAYERS':'	nrs:us_county_houses', 'TILED':true },
+        params: {'LAYERS':'nrs:us_county_houses', 'TILED':true },
         serverType: 'geoserver',
         visibility: true
     })
@@ -108,8 +108,8 @@
   var countyParks = new ol.layer.Tile({
     title: "County Parks",
     source: new ol.source.TileWMS({
-        url: " ",
-        params: {'LAYERS':'	nrs: us_county_parks' , 'TILED':true },
+        url: "http://192.168.20.15:8080/geoserver/nrs/wms?service=WMS&version=1.1.0&request=GetMap&layers=nrs%3Aus_county_parks&bbox=36.81425892258702%2C-1.293317343583485%2C36.892604436780175%2C-1.246663040666396&width=768&height=457&srs=EPSG%3A4326&styles=&format=application/openlayers",
+        params: {'LAYERS':'nrs:us_county_parks' , 'TILED':true },
         serverType: 'geoserver',
         visibility: true
     })
@@ -120,7 +120,7 @@
   var countyEstate = new ol.layer.Tile({
     title: "County Estate Boundaries",
     source: new ol.source.TileWMS({
-        url: " ",
+        url: "http://192.168.20.15:8080/geoserver/nrs/wms?service=WMS&version=1.1.0&request=GetMap&layers=nrs%3Aus_estate_boundaries&bbox=36.75543350803227%2C-1.310377273150875%2C36.915752303772976%2C-1.251071184349314&width=768&height=330&srs=EPSG%3A4326&styles=&format=application/openlayers",
         params: {'LAYERS':'	nrs:us_estate_boundaries', 'TILED':true },
         serverType: 'geoserver',
         visibility: true
